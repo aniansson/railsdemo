@@ -7,9 +7,10 @@
    </li>
   <% end %>
 
-  <h2> <%= @article.comments.count %> Comments</h2>
-      <%= render @articles.comments %>
+  <h2> <%= article.comments.each do |comment| %> Comments</h2>
+      <%= comment.content %>
       <h3>Add a comment</h3>
       <%= render 'comments/form' %>
+      <% end %>
   <br>
 </ul>
