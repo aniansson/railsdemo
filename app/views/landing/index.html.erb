@@ -6,4 +6,10 @@
      Written by <%= article.author %> at <%= article.created_at %>
    </li>
   <% end %>
+
+  <h2> <%= @article.comments.count %> Comments</h2>
+      <%= render @articles.comments %>
+      <h3>Add a comment</h3>
+      <%= render 'comments/form' %>
+  <br>
 </ul>
